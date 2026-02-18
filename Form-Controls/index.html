@@ -1,27 +1,189 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>My form exercise</title>
-    <meta name="description" content="" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-  </head>
-  <body>
-    <header>
-      <h1>Product Pick</h1>
-    </header>
-    <main>
-      <form>
-        <!-- write your html here-->
-        <!-- 
-          try writing out the requirements first as comments
-        this will also help you fill in your PR message later-->
-      </form>
-    </main>
-    <footer>
-      <!-- change to your name-->
-      <p>By HOMEWORK SOLUTION</p>
-    </footer>
-  </body>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>T-Shirt Order</title>
+  <meta name="description" content="T-Shirt order form" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+
+    header,
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #222;
+      color: white;
+    }
+
+    main {
+      max-width: 600px;
+      margin: 2rem auto;
+      background: white;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1,
+    h2 {
+      margin-top: 0;
+    }
+
+    section {
+      margin-bottom: 1.5rem;
+    }
+
+    label {
+      display: inline-block;
+      margin-bottom: 0.3rem;
+    }
+
+    input[type="text"],
+    input[type="email"] {
+      width: 100%;
+      padding: 0.5rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    fieldset {
+      border: 1px solid #ccc;
+      padding: 1rem;
+      border-radius: 4px;
+    }
+
+    legend {
+      font-weight: bold;
+    }
+
+    button {
+      padding: 0.7rem 1.2rem;
+      border: none;
+      border-radius: 4px;
+      background-color: #0077cc;
+      color: white;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #005fa3;
+    }
+
+    footer p {
+      margin: 0;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>T-shirt Sale</h1>
+  </header>
+
+  <main>
+    <form>
+
+      <!-- Customer Information -->
+      <section>
+        <h2>Customer Information</h2>
+
+        <p>
+          <label for="name">Name *</label>
+          <input type="text" id="name" name="customer-name" required minlength="2" />
+        </p>
+
+        <p>
+          <label for="email">Email *</label>
+          <input type="email" id="email" name="customer-email" required />
+        </p>
+      </section>
+
+      <!-- Colour Selection -->
+      <section>
+        <h2>T-Shirt Colour *</h2>
+        <fieldset>
+          <legend>Select one colour</legend>
+
+          <p>
+            <input type="radio" id="red" name="colour" value="red" required />
+            <label for="red">Red</label>
+          </p>
+
+          <p>
+            <input type="radio" id="blue" name="colour" value="blue" />
+            <label for="blue">Blue</label>
+          </p>
+
+          <p>
+            <input type="radio" id="black" name="colour" value="black" />
+            <label for="black">Black</label>
+          </p>
+        </fieldset>
+      </section>
+
+      <!-- Size Selection -->
+      <section>
+        <h2>T-Shirt Size *</h2>
+        <fieldset>
+          <legend>Select one size</legend>
+
+          <p>
+            <input type="radio" id="xs" name="size" value="XS" required />
+            <label for="xs">XS</label>
+          </p>
+
+          <p>
+            <input type="radio" id="s" name="size" value="S" />
+            <label for="s">S</label>
+          </p>
+
+          <p>
+            <input type="radio" id="m" name="size" value="M" />
+            <label for="m">M</label>
+          </p>
+
+          <p>
+            <input type="radio" id="l" name="size" value="L" />
+            <label for="l">L</label>
+          </p>
+
+          <p>
+            <input type="radio" id="xl" name="size" value="XL" />
+            <label for="xl">XL</label>
+          </p>
+
+          <p>
+            <input type="radio" id="xxl" name="size" value="XXL" />
+            <label for="xxl">XXL</label>
+          </p>
+        </fieldset>
+      </section>
+
+      <!-- Submit -->
+      <section>
+        <button type="submit">Submit Order</button>
+      </section>
+    </form>
+  </main>
+
+  <footer>
+    <p>Website Dedicated To T-shirt Sale</p>
+  </footer>
+</body>
+
 </html>
