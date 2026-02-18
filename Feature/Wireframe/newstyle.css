@@ -87,10 +87,14 @@ body {
 }
 
 .page-footer {
-  border-top: 2px solid #000;
-  text-align: center;
-  padding: 1.5rem;
-  font-size: 0.9rem;
+  position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 1rem;
 }
 
 @media (max-width: 768px) {
