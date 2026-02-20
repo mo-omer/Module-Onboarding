@@ -8,6 +8,11 @@ body {
   background-color: #f4f4f4;
   color: #222;
   line-height: 1.6;
+
+  /* Sticky footer layout */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 .page-header {
@@ -27,6 +32,8 @@ body {
   max-width: 1100px;
   margin: 0 auto;
   padding: 1rem;
+  flex: 1;
+  /* pushes footer to bottom */
 }
 
 .visually-hidden {
@@ -53,7 +60,10 @@ body {
 
 .article-image {
   width: 100%;
-  height: auto;
+  height: 220px;
+  /* aligned image height */
+  object-fit: cover;
+  /* prevents distortion */
   display: block;
 }
 
@@ -61,7 +71,7 @@ body {
   padding: 1rem;
 }
 
-.card-body h3 {
+.card-body h2 {
   margin-top: 0;
 }
 
@@ -74,8 +84,8 @@ body {
   font-weight: bold;
 }
 
-.button:focus,
-.button:hover {
+.button:hover,
+.button:focus {
   background-color: #000;
   color: #fff;
 }
@@ -87,10 +97,6 @@ body {
 }
 
 .page-footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
   background: #918d8d;
   color: rgb(39, 37, 37);
   text-align: center;
