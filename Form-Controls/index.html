@@ -14,6 +14,9 @@
       background-color: #f4f4f4;
       margin: 0;
       padding: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
     }
 
     header,
@@ -31,6 +34,7 @@
       padding: 2rem;
       border-radius: 8px;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      flex: 1;
     }
 
     h1,
@@ -66,6 +70,18 @@
       font-weight: bold;
     }
 
+    .radio-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .radio-group div {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
     button {
       padding: 0.7rem 1.2rem;
       border: none;
@@ -82,10 +98,6 @@
 
     footer p {
       margin: 0;
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      width: 100%;
     }
   </style>
 </head>
@@ -118,21 +130,17 @@
         <h2>T-Shirt Colour *</h2>
         <fieldset>
           <legend>Select one colour</legend>
+          <div class="radio-group">
+            <div>
+              <input type="radio" id="red" name="colour" value="red" required />
+              <label for="red">Red</label>
+            </div>
 
-          <div>
-            <input type="radio" id="red" name="colour" value="red" required />
-            <label for="red">Red</label>
+            <div>
+              <input type="radio" id="black" name="colour" value="black" required />
+              <label for="black">Black</label>
+            </div>
           </div>
-
-          <label>
-            <input type="radio" name="colour" value="red" required />
-            Red  
-          </label>
-
-          <p>
-            <input type="radio" id="black" name="colour" value="black" />
-            <label for="black">Black</label>
-          </p>
         </fieldset>
       </section>
 
@@ -141,36 +149,37 @@
         <h2>T-Shirt Size *</h2>
         <fieldset>
           <legend>Select one size</legend>
+          <div class="radio-group">
+            <div>
+              <input type="radio" id="xs" name="size" value="XS" required />
+              <label for="xs">XS</label>
+            </div>
 
-          <p>
-            <input type="radio" id="xs" name="size" value="XS" required />
-            <label for="xs">XS</label>
-          </p>
+            <div>
+              <input type="radio" id="s" name="size" value="S" required />
+              <label for="s">S</label>
+            </div>
 
-          <p>
-            <input type="radio" id="s" name="size" value="S" />
-            <label for="s">S</label>
-          </p>
+            <div>
+              <input type="radio" id="m" name="size" value="M" required />
+              <label for="m">M</label>
+            </div>
 
-          <p>
-            <input type="radio" id="m" name="size" value="M" />
-            <label for="m">M</label>
-          </p>
+            <div>
+              <input type="radio" id="l" name="size" value="L" required />
+              <label for="l">L</label>
+            </div>
 
-          <p>
-            <input type="radio" id="l" name="size" value="L" />
-            <label for="l">L</label>
-          </p>
+            <div>
+              <input type="radio" id="xl" name="size" value="XL" required />
+              <label for="xl">XL</label>
+            </div>
 
-          <p>
-            <input type="radio" id="xl" name="size" value="XL" />
-            <label for="xl">XL</label>
-          </p>
-
-          <p>
-            <input type="radio" id="xxl" name="size" value="XXL" />
-            <label for="xxl">XXL</label>
-          </p>
+            <div>
+              <input type="radio" id="xxl" name="size" value="XXL" required />
+              <label for="xxl">XXL</label>
+            </div>
+          </div>
         </fieldset>
       </section>
 
@@ -182,7 +191,7 @@
   </main>
 
   <footer>
-    <p>Website Dedicated To T-shirt Sale</p>
+    <p>By MOHAMMED OMER</p>
   </footer>
 </body>
 
