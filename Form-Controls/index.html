@@ -13,7 +13,6 @@
       font-family: Arial, sans-serif;
       background-color: #f4f4f4;
       margin: 0;
-      padding: 0;
       min-height: 100vh;
       display: flex;
       flex-direction: column;
@@ -46,8 +45,7 @@
       margin-bottom: 1.5rem;
     }
 
-    /* Updated - more specific to avoid affecting radio labels */
-    label:not(.radio-group label) {
+    label {
       display: inline-block;
       margin-bottom: 0.3rem;
     }
@@ -71,30 +69,21 @@
       font-weight: bold;
     }
 
-    /* Updated radio group styling */
     .radio-group {
       display: flex;
       flex-direction: column;
       gap: 0.5rem;
     }
 
-    .radio-group div {
-      display: flex;
-      align-items: center;
-    }
-
-    /* New style for wrapped labels */
     .radio-group label {
       display: flex;
       align-items: center;
       gap: 0.5rem;
       cursor: pointer;
-      margin-bottom: 0;  /* Override default label margin */
     }
 
-    /* Keep the original radio group styling for colour section */
-    .radio-group:not(.size-group) div {
-      gap: 0.5rem;
+    .form-actions {
+      margin-top: 1.5rem;
     }
 
     button {
@@ -119,11 +108,12 @@
 
 <body>
   <header>
-    <h1>T-shirt Sale</h1>
+    <h1>T-Shirt Sale</h1>
   </header>
 
   <main>
     <form>
+
       <!-- Customer Information -->
       <section>
         <h2>Customer Information</h2>
@@ -145,18 +135,22 @@
         <fieldset>
           <legend>Select one colour</legend>
           <div class="radio-group">
-            <div>
-              <input type="radio" id="red" name="colour" value="red" required />
-              <label for="red">Red</label>
-            </div>
-            <div>
-              <input type="radio" id="black" name="colour" value="black" required />
-              <label for="black">Black</label>
-            </div>
-            <div>
-              <input type="radio" id="blue" name="colour" value="blue" required />
-              <label for="blue">Blue</label>
-            </div>
+
+            <label>
+              <input type="radio" name="colour" value="red" required />
+              Red
+            </label>
+
+            <label>
+              <input type="radio" name="colour" value="black" />
+              Black
+            </label>
+
+            <label>
+              <input type="radio" name="colour" value="blue" />
+              Blue
+            </label>
+
           </div>
         </fieldset>
       </section>
@@ -166,45 +160,47 @@
         <h2>T-Shirt Size *</h2>
         <fieldset>
           <legend>Select one size</legend>
-          <div class="radio-group size-group">
-            <div>
-              <label>
-                <input type="radio" name="size" value="XS" required /> XS
-              </label>
-            </div>
-            <div>
-              <label>
-                <input type="radio" name="size" value="S" /> S
-              </label>
-            </div>
-            <div>
-              <label>
-                <input type="radio" name="size" value="M" /> M
-              </label>
-            </div>
-            <div>
-              <label>
-                <input type="radio" name="size" value="L" /> L
-              </label>
-            </div>
-            <div>
-              <label>
-                <input type="radio" name="size" value="XL" /> XL
-              </label>
-            </div>
-            <div>
-              <label>
-                <input type="radio" name="size" value="XXL" /> XXL
-              </label>
-            </div>
+          <div class="radio-group">
+
+            <label>
+              <input type="radio" name="size" value="XS" required />
+              XS
+            </label>
+
+            <label>
+              <input type="radio" name="size" value="S" />
+              S
+            </label>
+
+            <label>
+              <input type="radio" name="size" value="M" />
+              M
+            </label>
+
+            <label>
+              <input type="radio" name="size" value="L" />
+              L
+            </label>
+
+            <label>
+              <input type="radio" name="size" value="XL" />
+              XL
+            </label>
+
+            <label>
+              <input type="radio" name="size" value="XXL" />
+              XXL
+            </label>
+
           </div>
         </fieldset>
       </section>
 
-      <!-- Submit -->
-      <section>
+      <!-- Submit Button -->
+      <div class="form-actions">
         <button type="submit">Submit Order</button>
-      </section>
+      </div>
+
     </form>
   </main>
 
